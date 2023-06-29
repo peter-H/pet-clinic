@@ -27,3 +27,5 @@ jobs:
           # hier ist Platz für maven package und docker build
           mvn package
           docker build --tag pet-clinic:latest -f Dockerfile .
+          docker login gitlab.reutlingen-university.de:5050 -u hertkorn -p ${GITLAB_TOKEN}
+          docker push gitlab.reutlingen-university.de:5050/mki-swt2/devops-peclinic-registry/pet-clinic:latest -u hertkorn -p ${GITLAB_TOKEN}
