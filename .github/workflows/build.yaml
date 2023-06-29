@@ -27,4 +27,4 @@ jobs:
           mvn package
           docker build --tag pet-clinic:latest -f Dockerfile .
           docker login -u peterhertkorn -p ${DOCKERHUB_TOKEN}
-          docker image push pet-clinic:latest -u hertkorn -p ${DOCKERHUB_TOKEN}
+          docker image push pet-clinic:latest
