@@ -19,7 +19,8 @@ jobs:
         cache: maven
     #### AUFGABE 2: SONAR
       # hier ist der Platz für die Konfiguration der Sonar Analyse
-  
+    - name: Sonar
+      run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=peter-H_pet-clinic
     - name: Compile, build and push
       run: |
         #### AUFGABE 3 COMPILE, DOCKER BUILD UND PUSH
