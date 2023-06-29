@@ -3,9 +3,8 @@ on: [ push ]
 env:
 #### An dieser Stelle müssen eure persönlichen Umgebungsvariablen eingetragen werden
   # Tip: Die Token/der API-Key werden als Secrets in den Repository-Settings eingetragen und hier referenziert.
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+  DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }} 
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }} 
 jobs:
   compile:
     name: Compile
@@ -27,5 +26,5 @@ jobs:
           # hier ist Platz für maven package und docker build
           mvn package
           docker build --tag pet-clinic:latest -f Dockerfile .
-          docker login gitlab.reutlingen-university.de:5050 -u hertkorn -p ${GITLAB_TOKEN}
-          docker push gitlab.reutlingen-university.de:5050/mki-swt2/devops-peclinic-registry/pet-clinic:latest -u hertkorn -p ${GITLAB_TOKEN}
+          docker login -u peterhertkorn -p ${DOCKERHUB_TOKEN}
+          docker image push pet-clinic:latest -u hertkorn -p ${DOCKERHUB_TOKEN}
