@@ -3,7 +3,7 @@ Für den Workshop an Hochschulen, nutzen wir ein frei verfügbares Repository vo
 # Red Hat Actions - Spring Pet Clinic Sample
 
 [![OpenShift Pet Clinic Workflow](https://github.com/redhat-actions/spring-petclinic/workflows/OpenShift%20Pet%20Clinic%20Workflow/badge.svg)](https://github.com/redhat-actions/spring-petclinic/actions)
-
+ 
 This is a fork of the [Spring Pet Clinic](https://github.com/spring-projects/spring-petclinic) which uses Red Hat's GitHub Actions to build an application image and deploy it to OpenShift as an example CI/CD workflow.
 
 A Dockerfile and Helm Chart have been added to make this a cloud-ready version of the petclinic.
