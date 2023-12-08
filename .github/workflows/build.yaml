@@ -1,5 +1,5 @@
 name: Docker Build and Release
-on: [ push ]
+on: [ push, workflow_dispatch ]
 env:
 #### An dieser Stelle müssen eure persönlichen Umgebungsvariablen eingetragen werden
   # Tip: Die Token/der API-Key werden als Secrets in den Repository-Settings eingetragen und hier referenziert.
@@ -32,7 +32,7 @@ jobs:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
-    - name: Build and analyze
+    - name: Sonar analysis
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
