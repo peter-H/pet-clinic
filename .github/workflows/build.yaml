@@ -43,5 +43,5 @@ jobs:
           # hier ist Platz für maven package und docker build
           mvn package
           docker build --tag peterhertkorn/pet-clinic:latest -f Dockerfile .
-          docker login -u peterhertkorn -p ${DOCKERHUB_TOKEN}
+          docker login -u peterhertkorn -p ${{ secrets.DOCKERHUB_TOKEN }}
           docker image push peterhertkorn/pet-clinic:latest
