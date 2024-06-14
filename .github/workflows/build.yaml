@@ -46,5 +46,5 @@ jobs:
           #docker login -u peterhertkorn -p ${{ secrets.DOCKERHUB_TOKEN }}
           #docker image push peterhertkorn/pet-clinic:latest
           docker build --tag ghcr.io/peter-h/pet-clinic:latest -f Dockerfile .
-          docker login -u peter-h -p ${{ secrets.GH_TOKEN }}
+          echo ${{ secrets.GH_TOKEN }} | docker login ghcr.io -u peter-h --password-stdin
           docker image push ghcr.io/peter-h/pet-clinic:latest
