@@ -48,3 +48,4 @@ jobs:
           docker build --tag ghcr.io/peter-h/pet-clinic:latest -f Dockerfile .
           echo ${{ secrets.GH_TOKEN_2024 }} | docker login ghcr.io -u peter-H --password-stdin
           docker image push ghcr.io/peter-h/pet-clinic:latest
+          
