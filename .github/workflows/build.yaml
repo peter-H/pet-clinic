@@ -42,6 +42,8 @@ jobs:
         #### AUFGABE 3 COMPILE, DOCKER BUILD UND PUSH
           # hier ist Platz für maven package und docker build
           mvn package
-          docker build --tag peterhertkorn/pet-clinic:latest -f Dockerfile .
-          docker login -u peterhertkorn -p ${{ secrets.DOCKERHUB_TOKEN }}
-          docker image push peterhertkorn/pet-clinic:latest
+          #docker build --tag peterhertkorn/pet-clinic:latest -f Dockerfile .
+          #docker login -u peterhertkorn -p ${{ secrets.DOCKERHUB_TOKEN }}
+          #docker image push peterhertkorn/pet-clinic:latest
+          docker build --tag ghcr.io/peter-H/pet-clinic:latest -f Dockerfile .
+          docker image push ghcr.io/peter-H/pet-clinic:latest
