@@ -3,8 +3,8 @@ on: [ push, workflow_dispatch ]
 env:
 #### An dieser Stelle müssen eure persönlichen Umgebungsvariablen eingetragen werden
   # Tip: Die Token/der API-Key werden als Secrets in den Repository-Settings eingetragen und hier referenziert.
-  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Needed to get PR information, if any
-  DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN_2024 }} 
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN_2024 }}  # Needed to get PR information, if any
+  DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }} 
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 jobs:
   compile:
