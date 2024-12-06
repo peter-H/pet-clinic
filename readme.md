@@ -13,7 +13,7 @@ A Dockerfile and Helm Chart have been added to make this a cloud-ready version o
 - [buildah-action](https://github.com/redhat-actions/buildah-action)
 - [push-to-registry](https://github.com/redhat-actions/push-to-registry)
 - [oc-login](https://github.com/redhat-actions/oc-login)
-
+ 
 It demos an end-to-end workflow which:
 - Compiles a Java Spring web application
 - Builds a container image
