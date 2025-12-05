@@ -64,6 +64,6 @@ Separate from the demo above, the project can also be built from its Dockerfile 
 mvn package && docker build . -t petclinic:latest
 docker run -p 8080:8080 petclinic:latest
 ```
-
+ 
 After the server starts, the app will be available at `localhost:8080`.
   
